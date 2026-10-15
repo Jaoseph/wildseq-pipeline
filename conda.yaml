@@ -1,0 +1,60 @@
+name: wildseq
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - r-base=4.3 
+
+  # Keep all R packages you had, but without pinned versions
+  - r-languageserver
+  - r-tidyverse
+  - r-devtools
+  - r-seurat
+  - r-seuratobject
+  - r-dplyr
+  - r-ggplot2
+  - r-pheatmap
+  - r-venndiagram
+  - r-readr
+  - r-remotes
+  - r-rmagic
+  - r-viridis
+  - r-xml
+  - r-rsqlite
+  - r-checkmate
+  - r-argparse
+  - r-phater
+  - r-msigdbr
+
+  # Bioconductor packages you want
+  - bioconductor-deseq2
+  - bioconductor-omnipathr
+  - bioconductor-decoupler
+  - bioconductor-progeny
+  - bioconductor-clusterprofiler
+  - bioconductor-org.hs.eg.db
+  - bioconductor-reactomepa
+  # - bioconductor-msigdbr
+  - bioconductor-enrichplot
+
+
+  # Bioconda packages
+  - bioconda-samtools
+  - bioconda-umi_tools
+  - bioconda-r-enrichr
+  - bioconda-presto
+
+  # Python + snakemake utilities (keep if needed)
+  - python
+  - snakemake
+  - snakemake-executor-plugin-slurm
+  - snakemake-executor-plugin-slurm-jobstep
+  - magic-impute
+  - phate
+
+  # Optional core libraries for R
+  - libxml2
+  - libcurl
+  - libiconv
+  - libsqlite

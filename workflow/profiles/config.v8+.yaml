@@ -1,0 +1,49 @@
+executor: slurm
+latency-wait: 600
+jobs: 400
+rerun-incomplete: True
+slurm-logdir: '/scratche/slow/jblab/chong02/wildseq/logs/SLX-28281'
+slurm-keep-successful-logs: True
+jobscript: "/scratche/slow/jblab/chong02/wildseq/workflow/profiles/jobscript.sh"
+
+default-resources:
+  slurm_partition: 'epyc'
+  slurm_account: 'jblab'
+  mem_mb: 8000
+  runtime: "10h"
+  cpus_per_task: 2
+set-resources:
+  cellranger_count:
+    runtime: "8h"
+    cpus_per_task: 32
+    mem_mb: 200000
+  enrich_pcr:
+    cpus_per_task: 16
+    mem_mb: 32000
+  clone_assignment:
+    cpus_per_task: 4
+    mem_mb: 160000
+  differential_expression_analysis:
+    cpus_per_task: 4
+    mem_mb: 80000
+  demo_integration:
+    cpus_per_task: 4
+    mem_mb: 48000
+  ciov3_ciov6_integrated_seurat:
+    cpus_per_task: 4
+    mem_mb: 80000
+  ciov3_ciov6_integrated_seurat_merged:
+    cpus_per_task: 4
+    mem_mb: 80000
+  scTransform:
+    cpus_per_task: 4
+    mem_mb: 80000
+  scTransformSLX26635:
+    cpus_per_task: 4
+    mem_mb: 160000
+  differential_expression_analysis_7d:
+    cpus_per_task: 4
+    mem_mb: 80000
+  differential_expression_analysis_19d:
+    cpus_per_task: 4
+    mem_mb: 50000

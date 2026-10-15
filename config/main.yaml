@@ -1,0 +1,10 @@
+# Configuration file for Snakemake pipeline
+
+SLX_IDs: 
+  - SLX-28281
+
+# use this metadata for step 1
+sample_metadata: "data/metadata/sample_metadata_SLX-28281.csv"
+
+# use this metadata for step 2, after adding threshold values 
+# sample_metadata: "/scratchc/jblab/chong02/wildseq/results/SLX-27939/sample_metadata_SLX-27939_thresholds.csv" 
